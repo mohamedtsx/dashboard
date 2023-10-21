@@ -1,5 +1,7 @@
 # Next.js Dashboard Template
 
+![Next.js Blog Template](https://nextjs-dash-template.vercel.app/dashboard.png)
+
 <div>An open source dashboard template made with Next.js 13</div>
 <a href="http://nextjs-dash-template.vercel.app/">Demo</a>
 
