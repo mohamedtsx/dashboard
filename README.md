@@ -2,8 +2,12 @@
 
 ![Next.js Blog Template](https://nextjs-dash-template.vercel.app/dashboard.png)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fthemanafov%2Fnextjs-dashboard-template)
+
 <div>An open source dashboard template made with Next.js 13</div>
 <a href="http://nextjs-dash-template.vercel.app/">Demo</a>
+
+---
 
 ## Overview
 
@@ -46,6 +50,8 @@ npm run dev
 - ORM - [Prisma](https://prisma.io)
 
 and so on.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fthemanafov%2Fnextjs-dashboard-template)
 
 ## License
 
