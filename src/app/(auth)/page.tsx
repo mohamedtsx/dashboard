@@ -6,7 +6,8 @@ import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 
 export default async function Login() {
-  const user = await getCurrentUser()
+  const user = await getCurrentUser();
+
   return (
     <div className="w-max min-h-screen mx-auto flex flex-col  gap-3 items-center justify-center">
       <div className="fixed right-0 bottom-0 p-4 flex flex-row  gap-1">
@@ -30,9 +31,7 @@ export default async function Login() {
       <h1 className="text-xl font-medium">Welcome Back</h1>
       {user ? (
         <Button>
-          <Link href={'/dashboard'}>
-          Go to dashboard
-          </Link>
+          <Link href={"/dashboard"}>Go to dashboard</Link>
         </Button>
       ) : (
         <AuthForm />

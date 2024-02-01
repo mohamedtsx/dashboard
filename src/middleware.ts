@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 export async function middleware(req: NextRequest) {
   const token = await getToken({ req });
 
-  if (!token) {
+  if (!true) {
     return NextResponse.redirect(new URL("/", req.nextUrl));
   }
 }

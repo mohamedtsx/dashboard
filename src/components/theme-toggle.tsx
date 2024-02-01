@@ -5,14 +5,17 @@ import { Icons } from "./icons";
 import { cn } from "@/lib/utils";
 
 interface ThemeToggleProps {
-  className?: string
+  className?: string;
 }
 
-export default function ThemeToggle({className}: ThemeToggleProps) {
+export default function ThemeToggle({ className }: ThemeToggleProps) {
   const { setTheme, theme } = useTheme();
   return (
     <div
-      className={cn("w-9 h-9 flex justify-center items-center cursor-pointer p-2 hover:bg-gray-2 rounded-lg transition-colors", className)}
+      className={cn(
+        "w-9 h-9 flex justify-center items-center cursor-pointer p-2 hover:bg-gray-2 rounded-lg transition-colors",
+        className
+      )}
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <Icons.sun size={20} className="hidden dark:inline" />
