@@ -16,36 +16,12 @@ import {
 export default function Customers() {
   return (
     <DashboardShell>
-      <DashboardHeader title="Customers" />
+      <DashboardHeader title="Users" />
       <div className="px-5">
         <Card className="rounded-lg">
-          <Table className="mt-5">
-            <TableHead>
-              <TableRow>
-                <TableHeaderCell>Customer</TableHeaderCell>
-                <TableHeaderCell>Status</TableHeaderCell>
-                <TableHeaderCell>Course</TableHeaderCell>
-                <TableHeaderCell>Progress</TableHeaderCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {customersData.map((item) => (
-                <TableRow key={item.customer}>
-                  <TableCell>{item.customer}</TableCell>
-                  <TableCell>
-                    <Text>{item.status}</Text>
-                  </TableCell>
-                  <TableCell>
-                    <Text>{item.course}</Text>
-                  </TableCell>
-                  <TableCell className="flex flex-row gap-4 items-center">
-                    <Progress value={item.progress} />
-                    {item.progress + "%"}
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+          <div className="flex items-center justify-center ">
+            قريباً إن شاء الله
+          </div>
         </Card>
       </div>
     </DashboardShell>

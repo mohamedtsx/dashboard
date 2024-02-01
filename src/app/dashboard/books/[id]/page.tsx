@@ -26,13 +26,16 @@ export default function Review({ params: { id } }: { params: { id: string } }) {
   return (
     <div className="p-4 md:p-6 lg:p-8 bg-white rounded-lg shadow-lg">
       <div className="flex gap-20 border-b-2 pb-5">
-        <Image
-          alt="Book cover"
-          className="rounded-lg shadow-lg w-64 h-auto"
-          src={imageUrl}
-          width={600}
-          height={800}
-        />
+        <div className="relative">
+          <Image
+            alt="Book cover"
+            className="rounded-lg shadow-lg  h-auto"
+            src={imageUrl}
+            width={256}
+            height={341}
+          />
+        </div>
+
         <div className="flex flex-col justify-between w-full">
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{title}</h1>
