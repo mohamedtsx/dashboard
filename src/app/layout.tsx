@@ -3,7 +3,7 @@ import ThemeProvider from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import Analytics from "@/components/analytics";
-
+import { cn } from "@/lib/utils";
 const ubuntu = Ubuntu({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={ubuntu.className}>
+    <html lang="en" className="h-full">
+      <body className={cn(ubuntu.className, "h-full")}>
         <ThemeProvider attribute="class" disableTransitionOnChange>
           {children}
         </ThemeProvider>

@@ -6,7 +6,7 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex flex-row p-3 gap-3 h-screen">
+    <div className="flex flex-row p-3 gap-3 h-full">
       <aside className="max-h-screen w-60 p-5 bg-gray-3 border border-gray-2  rounded-lg sticky top-0 max-md:hidden ">
         <Nav />
       </aside>
