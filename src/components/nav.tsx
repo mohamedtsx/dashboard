@@ -21,7 +21,10 @@ export default function Nav() {
               href={link.href}
               className={cn(
                 "py-1 text-sm px-2 rounded-lg flex flex-row gap-2 transition-colors items-center ",
-                pathname === link.href ? "bg-gray-2" : ""
+                pathname === link.href ||
+                  (pathname.includes(link.href) && link.href !== "/dashboard")
+                  ? "bg-gray-2"
+                  : ""
               )}
               key={i}
             >

@@ -13,6 +13,7 @@ import {
   Text,
 } from "@tremor/react";
 import Link from "next/link";
+import BooksNav from "@/components/BooksNav";
 
 function BooksLayout({ children }: { children: ReactNode }) {
   return (
@@ -20,11 +21,7 @@ function BooksLayout({ children }: { children: ReactNode }) {
       <DashboardHeader title="Books" />
       <div className="px-5">
         <Card className="rounded-xl">
-          <div className="py-5 flex w-fit gap-4">
-            <Link href="/dashboard/books">queue</Link>
-            <Link href="/dashboard/books/accepted">accepted</Link>
-            <Link href="/dashboard/books/rejected">rejected</Link>
-          </div>
+          <BooksNav />
           <div>{children}</div>
         </Card>
       </div>
