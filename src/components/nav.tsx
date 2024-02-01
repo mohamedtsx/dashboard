@@ -12,7 +12,7 @@ export default function Nav() {
 
   return (
     <div className="flex flex-col  gap-5 h-full">
-      <h1 className="font-medium text-lg">Dashboard</h1>
+      <h1 className="font-medium text-lg">Qaree Dashboard</h1>
       <nav className="flex flex-col  flex-1 gap-2">
         {dashboardConfig.sidebarNav.map((link, i) => {
           const Icon = Icons[link.icon];

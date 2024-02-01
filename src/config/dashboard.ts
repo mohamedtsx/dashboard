@@ -8,14 +8,14 @@ export const dashboardConfig: DashboardConfig = {
       icon: "home",
     },
     {
-      title: "Customers",
+      title: "Users",
       href: "/dashboard/customers",
       icon: "users",
     },
     {
       title: "Books",
       href: "/dashboard/books",
-      icon: "home",
+      icon: "book",
     },
   ],
 };

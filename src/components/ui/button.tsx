@@ -8,20 +8,23 @@ export interface ButtonProps
   asChild?: boolean;
 }
 
+export const buttonVariants =
+  "w-fit flex flex-row gap-3 items-center hover:bg-gray-3 transition-colors border border-gray-2 px-3 py-2 rounded-lg disabled:opacity-5 disabled:cursor-not-allowed";
+
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(
-          "w-full flex flex-row gap-3 items-center hover:bg-gray-3 transition-colors border border-gray-2 px-3 py-2 rounded-lg disabled:opacity-5 disabled:cursor-not-allowed",
-          className,
+          "flex flex-row w-fit gap-3 items-center hover:bg-gray-3 transition-colors border border-gray-2 px-3 py-2 rounded-lg disabled:opacity-5 disabled:cursor-not-allowed",
+          className
         )}
         ref={ref}
         {...props}
       />
     );
-  },
+  }
 );
 Button.displayName = "Button";
 

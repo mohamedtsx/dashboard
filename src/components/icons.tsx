@@ -1,4 +1,13 @@
-import { Home, Loader, Menu, Moon, Settings, Sun, Users } from "lucide-react";
+import {
+  Home,
+  Loader,
+  Menu,
+  Moon,
+  Settings,
+  Sun,
+  Users,
+  Book,
+} from "lucide-react";
 
 export const Icons = {
   home: Home,
@@ -8,4 +17,5 @@ export const Icons = {
   moon: Moon,
   spinner: Loader,
   menu: Menu,
+  book: Book,
 };

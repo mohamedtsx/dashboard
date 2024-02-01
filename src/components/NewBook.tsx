@@ -2,7 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { TypeBookCard } from "@/types";
 
-import { Button } from "./ui/button";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 function BookCard({ book }: { book: TypeBookCard }) {
   const { author, date, id, imageUrl, title } = book;
@@ -37,7 +39,12 @@ function BookCard({ book }: { book: TypeBookCard }) {
         </div>
       </div>
       <div className="flex items-end">
-        <Button className="hover:bg-gray-2 transition">Review</Button>
+        <Link
+          href={`/dashboard/books/${id}`}
+          className={cn(buttonVariants, "hover:bg-gray-2 transition")}
+        >
+          Review
+        </Link>
       </div>
     </div>
   );
