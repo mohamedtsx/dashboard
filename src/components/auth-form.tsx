@@ -7,6 +7,7 @@ import { Icons } from "./icons";
 
 export default function AuthForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const login = async () => {
     setIsLoading(true);
     await signIn("github", {
@@ -15,14 +16,17 @@ export default function AuthForm() {
     });
     setIsLoading(false);
   };
+
   return (
-    <Button className="flex flex-row gap-2" onClick={login}>
-      {isLoading ? (
-        <Icons.spinner size={20} className="animate-spin" />
-      ) : (
-        <GitHubLogoIcon width={20} height={20} />
-      )}
-      Sign in with GitHub
-    </Button>
+    <div>
+      <Button className="flex flex-row gap-2" onClick={login}>
+        {isLoading ? (
+          <Icons.spinner size={20} className="animate-spin" />
+        ) : (
+          <GitHubLogoIcon width={20} height={20} />
+        )}
+        Sign in with GitHub
+      </Button>
+    </div>
   );
 }

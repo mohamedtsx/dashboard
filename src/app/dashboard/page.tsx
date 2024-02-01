@@ -59,7 +59,7 @@ export default function Home() {
       </div>
       <div className="px-5">
         <Card className="rounded-lg ">
-          <Title>Course Members</Title>
+          <Title>Qaree Users</Title>
           <AreaChart
             className="rounded-md"
             data={totalMembersData}
