@@ -25,3 +25,12 @@ export type SidebarNavItem = {
 export type DashboardConfig = {
   sidebarNav: SidebarNavItem[];
 };
+
+export interface TypeBookCard {
+  title: string;
+  imageUrl: string;
+  author: string;
+  date: string;
+  id: number;
+  authorId: number;
+}

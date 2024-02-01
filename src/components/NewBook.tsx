@@ -1,38 +1,43 @@
 import React from "react";
 import Image from "next/image";
+import { TypeBookCard } from "@/types";
 
-interface Book {
-  title: string;
-  imageUrl: string;
-  author: string;
-  date: string;
-  id: number;
-  authorId: number;
-}
+import { Button } from "./ui/button";
 
-function BookCard({ book }: { book: Book }) {
+function BookCard({ book }: { book: TypeBookCard }) {
   const { author, date, id, imageUrl, title } = book;
 
   return (
-    <div className="flex justify-between">
-      <Image src={imageUrl} alt="book cover image" width={160} height={225} />
-      <div>
-        <div>
-          <h2>{title}</h2>
-          <p>
-            By{" "}
-            <a
-              href="https://en.wikipedia.org/wiki/Taha_Hussein"
-              target="_blank"
-              className="hover:outline text-blue-600 capitalize"
-            >
-              {author}
-            </a>
-          </p>
+    <div className="flex border justify-between bg-gray-100 p-4 rounded-lg shadow-md">
+      <div className="flex">
+        <Image
+          src={imageUrl}
+          alt="book cover image"
+          width={120}
+          height={160}
+          className="rounded-md"
+        />
+        <div className="ml-4">
+          <div>
+            <h2 className="text-lg font-bold">{title}</h2>
+            <p className="text-sm text-gray-700">
+              By{" "}
+              <a
+                href="https://en.wikipedia.org/wiki/Taha_Hussein"
+                target="_blank"
+                className="hover:underline text-blue-600 capitalize"
+              >
+                {author}
+              </a>
+            </p>
+            <div className="text-sm text-gray-600">
+              Published @ <span>{date}</span>
+            </div>
+          </div>
         </div>
-        <div>
-          Published @ <span>{date}</span>
-        </div>
+      </div>
+      <div className="flex items-end">
+        <Button className="hover:bg-gray-2 transition">Review</Button>
       </div>
     </div>
   );

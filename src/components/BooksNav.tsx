@@ -1,10 +1,8 @@
 "use client";
 
-import { dashboardConfig } from "@/config/dashboard";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Icons } from "./icons";
 
 const booksNav = [
   {
@@ -28,7 +26,7 @@ export default function BooksNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-2 w-fit px-8 rounded-3xl border py-2 mx-auto">
+    <nav className="flex gap-2 w-fit px-8 rounded-3xl border py-2 mx-auto mb-8">
       {booksNav.map((link, i) => {
         return (
           <Link

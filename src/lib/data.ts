@@ -1,4 +1,4 @@
-import { CustomersData, TotalMembers } from "@/types";
+import { CustomersData, TotalMembers, TypeBookCard } from "@/types";
 
 export const totalMembersData: TotalMembers = [
   {
@@ -171,5 +171,72 @@ export const customersData: CustomersData = [
     status: "Enrolled",
     course: "Creative Writing Workshop",
     progress: 20,
+  },
+];
+
+export const inQueueBooks: TypeBookCard[] = [
+  {
+    title: "The Great Gatsby",
+    imageUrl: "https://picsum.photos/id/37/120/160",
+    author: "F. Scott Fitzgerald",
+    date: "2 days ago",
+    id: 1,
+    authorId: 101,
+  },
+  {
+    title: "To Kill a Mockingbird",
+    imageUrl: "https://picsum.photos/id/38/120/160",
+    author: "Harper Lee",
+    date: "5 days ago",
+    id: 2,
+    authorId: 102,
+  },
+  {
+    title: "The life is nullish",
+    imageUrl: "https://picsum.photos/id/39/120/160",
+    author: "George Orwell",
+    date: "2 weeks ago",
+    id: 3,
+    authorId: 103,
+  },
+  {
+    title: "1984",
+    imageUrl: "https://picsum.photos/id/40/120/160",
+    author: "George Orwell",
+    date: "3 weeks ago",
+    id: 4,
+    authorId: 103,
+  },
+  {
+    title: "Brave New World",
+    imageUrl: "https://picsum.photos/id/41/120/160",
+    author: "Aldous Huxley",
+    date: "1 month ago",
+    id: 5,
+    authorId: 104,
+  },
+  {
+    title: "The Catcher in the Rye",
+    imageUrl: "https://picsum.photos/id/42/120/160",
+    author: "J.D. Salinger",
+    date: "2 months ago",
+    id: 6,
+    authorId: 105,
+  },
+  {
+    title: "Pride and Prejudice",
+    imageUrl: "https://picsum.photos/id/43/120/160",
+    author: "Jane Austen",
+    date: "1 week ago",
+    id: 7,
+    authorId: 106,
+  },
+  {
+    title: "Moby-Dick",
+    imageUrl: "https://picsum.photos/id/44/120/160",
+    author: "Herman Melville",
+    date: "3 weeks ago",
+    id: 8,
+    authorId: 107,
   },
 ];
