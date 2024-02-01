@@ -8,7 +8,7 @@ import { Icons } from "./icons";
 
 const booksNav = [
   {
-    title: "Queue",
+    title: "In queue",
     href: "/dashboard/books",
     count: 19,
   },
@@ -24,31 +24,23 @@ const booksNav = [
   },
 ];
 
-/***
- *           <div className="py-5 flex w-fit gap-4">
-            <Link href="/dashboard/books">queue</Link>
-            <Link href="/dashboard/books/accepted">accepted</Link>
-            <Link href="/dashboard/books/rejected">rejected</Link>
-          </div>
- * @returns 
- */
 export default function BooksNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-2">
+    <nav className="flex gap-2 w-fit px-8 rounded-3xl border py-2 mx-auto">
       {booksNav.map((link, i) => {
         return (
           <Link
             href={link.href}
             className={cn(
-              "py-1 text-sm px-2 rounded-lg flex flex-row gap-2 transition-colors items-center ",
+              "rounded-lg flex flex-row gap-2 transition-colors items-center text-sm py-2 px-4 ",
               pathname === link.href ? "bg-gray-2" : ""
             )}
             key={i}
           >
             <div>{link.title}</div>
-            <div>{link.count}</div>
+            <div> {`(${link.count})`}</div>
           </Link>
         );
       })}
