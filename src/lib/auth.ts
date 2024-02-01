@@ -36,9 +36,9 @@ const authOptions: NextAuthOptions = {
     }),
   ],
 
-  // pages: {
-  //   signIn: "/",
-  // },
+  pages: {
+    signIn: "/",
+  },
 };
 
 export default authOptions;
